@@ -30,9 +30,9 @@ const SinglePokemon = () => {
   const navigate = useNavigate()
 
   return (
-    <div style={{backgroundColor: typeColors[selectedPokemon.types[0].toLowerCase()]}}>
+    <div className="single-pokemon-card" style={{backgroundColor: typeColors[selectedPokemon.types[0].toLowerCase()]}}>
 
-      <button onClick={() => navigate(-1)}>Go back</button>
+      <button className="back-button" onClick={() => navigate(-1)}>Go back</button>
       <h2>{selectedPokemon.name.toUpperCase()}</h2>
       <p>{selectedPokemon.id}</p>
       <img src={selectedPokemon.imageURL} alt={selectedPokemon.name + " image"}/>
